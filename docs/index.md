@@ -1,10 +1,10 @@
-# Github page for submission
+# Github page for manuscript submission
 
-## Data Analysis 
+## Primary Data Analysis 
 
 An R markdown file is available [link](rs_bltask_final_script_v1_2021_03_18.html)
 
-## A sample matlab-file for dynamic community detection algorithm
+## Matlab-files for dynamic community detection algorithm
 
 [dfcompute.m](https://github.com/seonjoo/neuralflexibility_brain_submission/blob/main/docs/sample_matlab_scripts/dfcompute.m)
 
