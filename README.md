@@ -1,1 +1,1 @@
-# neuralflexibility_brain_submission
+# neuralflexibility_submission
