@@ -2,15 +2,12 @@
 
 ## Primary Data Analysis 
 
-An R markdown file is available [link](rs_bltask_final_script_v1_2021_03_18.html)
+An R markdown file is available [link](Main_Analysis_285_shen_atlas_2021_08_03.html)
 
 ## Matlab-files for dynamic community detection algorithm
 
 [dfcompute.m](https://github.com/seonjoo/neuralflexibility_brain_submission/blob/main/docs/sample_matlab_scripts/dfcompute.m)
 
-[rann_subject1_community_detection.m](https://github.com/seonjoo/neuralflexibility_brain_submission/blob/main/docs/sample_matlab_scripts/rann_subject1_community_detection.m)
-
-[rann_subject1_nf_computation.m](https://github.com/seonjoo/neuralflexibility_brain_submission/blob/main/docs/sample_matlab_scripts/rann_subject1_nf_computation.m)
-
+[onerun_mat.m](https://github.com/seonjoo/neuralflexibility_brain_submission/blob/main/docs/sample_matlab_scripts/onerun_mat.m)
 
 

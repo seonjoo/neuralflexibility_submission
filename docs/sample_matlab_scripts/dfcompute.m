@@ -31,25 +31,28 @@ function [bestS, bestQ] = dfcompute(ts,winwidth,shift,numrepeat,GAMMA,OMEGA)
     for step_init = 1:shift:(nt-winwidth+1) %(ncol-window+1)/slide
  %       step_init
         [r,p] = corrcoef( ts(:, ((1:winwidth) + step_init-1))');
-        indx = tril(ones(size(r)),-1);
+        r(isnan(r))=0;
+	indx = tril(ones(size(r)),-1);
         p_l_bh = mafdr(p(indx==1),'BHFDR',true); %mafdr on p-values
         r_bh = 0*r;
         r_bh(indx==1) =  r(indx==1) .* (p_l_bh<0.05);
-        r_bh = r_bh + r_bh';
+        r_bh = double(r_bh + r_bh');
         dfcarray{1,j}=abs(r_bh);
         j=j+1;
     end
 
     [B,twom] = multiord_f(dfcarray,GAMMA,OMEGA);
     tmpS = cell(numrepeat,1);tmpQ = zeros(numrepeat,1);
+ 
     parfor k = 1:numrepeat %this step takes long time, use 100 for now
         rng(k)       %control random generator
         [tmpS{k,1},tmpQ(k,1)] = genlouvain(B,10000,0);
     end
     tmpQ=tmpQ/twom;
     %% find the minimum modularity
-    bestloc = find(tmpQ == min(tmpQ));
+    bestloc = find(tmpQ == max(tmpQ));
     bestS = reshape(tmpS{bestloc,1},size(ts,1),size(dfcarray,2));
     bestQ = tmpQ(bestloc,1);
     
 end
+
