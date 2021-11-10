@@ -1,8 +1,4 @@
 function [Q] = onerun_mat(fn)
-%	addpath '/ifs/scratch/msph/LeeLab/softwares/GenLouvain-master';
-%	addpath '/ifs/scratch/msph/LeeLab/softwares/GenLouvain-master/HelperFunctions';
-%	addpath '/ifs/scratch/msph/LeeLab/softwares/GenLouvain-master/Assignment'
-%	datpath = '/ifs/scratch/msph/LeeLab/RawData/CRRANN/MatRea/power/'
 
 	addpath '../../../../matlab_funcion/GenLouvain-master';
 	addpath '../../../../matlab_funcion/GenLouvain-master/HelperFunctions';
