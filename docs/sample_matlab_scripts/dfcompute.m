@@ -49,7 +49,7 @@ function [bestS, bestQ] = dfcompute(ts,winwidth,shift,numrepeat,GAMMA,OMEGA)
         [tmpS{k,1},tmpQ(k,1)] = genlouvain(B,10000,0);
     end
     tmpQ=tmpQ/twom;
-    %% find the minimum modularity
+   
     bestloc = find(tmpQ == max(tmpQ));
     bestS = reshape(tmpS{bestloc,1},size(ts,1),size(dfcarray,2));
     bestQ = tmpQ(bestloc,1);
